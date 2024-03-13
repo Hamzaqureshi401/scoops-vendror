@@ -34,10 +34,6 @@ class ApprovalRequest extends \Google\Model
   /**
    * @var string
    */
-  public $requestedDuration;
-  /**
-   * @var string
-   */
   public $requestedExpiration;
   protected $requestedLocationsType = AccessLocations::class;
   protected $requestedLocationsDataType = '';
@@ -105,20 +101,6 @@ class ApprovalRequest extends \Google\Model
   public function getRequestTime()
   {
     return $this->requestTime;
-  }
-  /**
-   * @param string
-   */
-  public function setRequestedDuration($requestedDuration)
-  {
-    $this->requestedDuration = $requestedDuration;
-  }
-  /**
-   * @return string
-   */
-  public function getRequestedDuration()
-  {
-    return $this->requestedDuration;
   }
   /**
    * @param string

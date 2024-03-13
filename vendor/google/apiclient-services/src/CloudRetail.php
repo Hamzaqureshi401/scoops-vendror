@@ -23,10 +23,9 @@ use Google\Client;
  * Service definition for CloudRetail (v2).
  *
  * <p>
- * Vertex AI Search for Retail API is made up of Retail Search, Browse and
- * Recommendations. These discovery AI solutions help you implement personalized
- * search, browse and recommendations, based on machine learning models, across
- * your websites and mobile applications.</p>
+ * Cloud Retail service enables customers to build end-to-end personalized
+ * recommendation systems without requiring a high level of expertise in machine
+ * learning, recommendation system, or Google Cloud.</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -114,16 +113,6 @@ class CloudRetail extends \Google\Service
                 'visitorId' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],'exportAnalyticsMetrics' => [
-              'path' => 'v2/{+catalog}:exportAnalyticsMetrics',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'catalog' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],'getAttributesConfig' => [

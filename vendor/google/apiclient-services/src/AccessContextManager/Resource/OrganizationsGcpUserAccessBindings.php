@@ -42,7 +42,6 @@ class OrganizationsGcpUserAccessBindings extends \Google\Service\Resource
    * @param GcpUserAccessBinding $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
-   * @throws \Google\Service\Exception
    */
   public function create($parent, GcpUserAccessBinding $postBody, $optParams = [])
   {
@@ -59,7 +58,6 @@ class OrganizationsGcpUserAccessBindings extends \Google\Service\Resource
    * "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
    * @param array $optParams Optional parameters.
    * @return Operation
-   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -75,7 +73,6 @@ class OrganizationsGcpUserAccessBindings extends \Google\Service\Resource
    * "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
    * @param array $optParams Optional parameters.
    * @return GcpUserAccessBinding
-   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -97,7 +94,6 @@ class OrganizationsGcpUserAccessBindings extends \Google\Service\Resource
    * To enumerate all items, use the next_page_token from your previous list
    * operation.
    * @return ListGcpUserAccessBindingsResponse
-   * @throws \Google\Service\Exception
    */
   public function listOrganizationsGcpUserAccessBindings($parent, $optParams = [])
   {
@@ -124,7 +120,6 @@ class OrganizationsGcpUserAccessBindings extends \Google\Service\Resource
    * required and may only contain the following fields: `access_levels`,
    * `dry_run_access_levels`. update_mask { paths: "access_levels" }
    * @return Operation
-   * @throws \Google\Service\Exception
    */
   public function patch($name, GcpUserAccessBinding $postBody, $optParams = [])
   {

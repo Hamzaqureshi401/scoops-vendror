@@ -560,10 +560,6 @@ class Integrations extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
-                'snapshotMetadataWithoutParams' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ],
                 'truncateParams' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -675,11 +671,6 @@ class Integrations extends \Google\Service
                 'fileFormat' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-                'files' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
                 ],
               ],
             ],'get' => [
@@ -1139,10 +1130,6 @@ class Integrations extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
-                'snapshotMetadataWithoutParams' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ],
                 'truncateParams' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -1254,11 +1241,6 @@ class Integrations extends \Google\Service
                 'fileFormat' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-                'files' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
                 ],
               ],
             ],'get' => [

@@ -74,16 +74,6 @@ class CloudTasks extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'getCmekConfig' => [
-              'path' => 'v2/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'list' => [
               'path' => 'v2/{+name}/locations',
               'httpMethod' => 'GET',
@@ -102,20 +92,6 @@ class CloudTasks extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'updateCmekConfig' => [
-              'path' => 'v2/{+name}',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -266,22 +242,7 @@ class CloudTasks extends \Google\Service
         'tasks',
         [
           'methods' => [
-            'buffer' => [
-              'path' => 'v2/{+queue}/tasks/{taskId}:buffer',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'queue' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'taskId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'create' => [
+            'create' => [
               'path' => 'v2/{+parent}/tasks',
               'httpMethod' => 'POST',
               'parameters' => [

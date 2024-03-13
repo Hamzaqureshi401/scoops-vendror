@@ -790,10 +790,6 @@ class Books extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'source' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],'update' => [
               'path' => 'books/v1/mylibrary/annotations/{annotationId}',

@@ -97,27 +97,7 @@ class CloudFunctions extends \Google\Service
         'functions',
         [
           'methods' => [
-            'abortFunctionUpgrade' => [
-              'path' => 'v2/{+name}:abortFunctionUpgrade',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'commitFunctionUpgrade' => [
-              'path' => 'v2/{+name}:commitFunctionUpgrade',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'create' => [
+            'create' => [
               'path' => 'v2/{+parent}/functions',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -225,41 +205,11 @@ class CloudFunctions extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],'redirectFunctionUpgradeTraffic' => [
-              'path' => 'v2/{+name}:redirectFunctionUpgradeTraffic',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'rollbackFunctionUpgradeTraffic' => [
-              'path' => 'v2/{+name}:rollbackFunctionUpgradeTraffic',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'setIamPolicy' => [
               'path' => 'v2/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'setupFunctionUpgradeConfig' => [
-              'path' => 'v2/{+name}:setupFunctionUpgradeConfig',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

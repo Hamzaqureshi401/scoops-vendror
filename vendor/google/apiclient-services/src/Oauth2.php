@@ -124,7 +124,6 @@ class Oauth2 extends \Google\Service
    * @opt_param string access_token
    * @opt_param string id_token
    * @return Tokeninfo
-   * @throws \Google\Service\Exception
    */
   public function tokeninfo($optParams = [])
   {

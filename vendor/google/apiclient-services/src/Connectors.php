@@ -66,51 +66,11 @@ class Connectors extends \Google\Service
         'connections',
         [
           'methods' => [
-            'checkReadiness' => [
-              'path' => 'v2/{+name}:checkReadiness',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'checkStatus' => [
-              'path' => 'v2/{+name}:checkStatus',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'exchangeAuthCode' => [
-              'path' => 'v2/{+name}:exchangeAuthCode',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'executeSqlQuery' => [
+            'executeSqlQuery' => [
               'path' => 'v2/{+connection}:executeSqlQuery',
               'httpMethod' => 'POST',
               'parameters' => [
                 'connection' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'refreshAccessToken' => [
-              'path' => 'v2/{+name}:refreshAccessToken',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -136,16 +96,6 @@ class Connectors extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'get' => [
-              'path' => 'v2/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'list' => [
               'path' => 'v2/{+parent}/actions',
               'httpMethod' => 'GET',
@@ -163,10 +113,6 @@ class Connectors extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
-                'view' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],
           ]
@@ -178,17 +124,7 @@ class Connectors extends \Google\Service
         'entityTypes',
         [
           'methods' => [
-            'get' => [
-              'path' => 'v2/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
+            'list' => [
               'path' => 'v2/{+parent}/entityTypes',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -202,10 +138,6 @@ class Connectors extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'view' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

@@ -44,7 +44,6 @@ class Baremetalsolution extends \Google\Service
   public $projects_locations_networks;
   public $projects_locations_nfsShares;
   public $projects_locations_operations;
-  public $projects_locations_osImages;
   public $projects_locations_provisioningConfigs;
   public $projects_locations_provisioningQuotas;
   public $projects_locations_sshKeys;
@@ -176,16 +175,6 @@ class Baremetalsolution extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],'loadAuthInfo' => [
-              'path' => 'v2/{+name}:loadAuthInfo',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],'patch' => [
@@ -422,44 +411,6 @@ class Baremetalsolution extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_osImages = new Baremetalsolution\Resource\ProjectsLocationsOsImages(
-        $this,
-        $this->serviceName,
-        'osImages',
-        [
-          'methods' => [
-            'get' => [
-              'path' => 'v2/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v2/{+parent}/osImages',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],

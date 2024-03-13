@@ -104,11 +104,6 @@ class CloudOSLogin extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
-                'regions' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
               ],
             ],
           ]

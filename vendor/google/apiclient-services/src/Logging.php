@@ -58,8 +58,6 @@ class Logging extends \Google\Service
   public $billingAccounts_locations_buckets_views;
   public $billingAccounts_locations_buckets_views_logs;
   public $billingAccounts_locations_operations;
-  public $billingAccounts_locations_recentQueries;
-  public $billingAccounts_locations_savedQueries;
   public $billingAccounts_logs;
   public $billingAccounts_sinks;
   public $entries;
@@ -72,8 +70,6 @@ class Logging extends \Google\Service
   public $folders_locations_buckets_views;
   public $folders_locations_buckets_views_logs;
   public $folders_locations_operations;
-  public $folders_locations_recentQueries;
-  public $folders_locations_savedQueries;
   public $folders_logs;
   public $folders_sinks;
   public $locations;
@@ -91,8 +87,6 @@ class Logging extends \Google\Service
   public $organizations_locations_buckets_views;
   public $organizations_locations_buckets_views_logs;
   public $organizations_locations_operations;
-  public $organizations_locations_recentQueries;
-  public $organizations_locations_savedQueries;
   public $organizations_logs;
   public $organizations_sinks;
   public $projects;
@@ -103,8 +97,6 @@ class Logging extends \Google\Service
   public $projects_locations_buckets_views;
   public $projects_locations_buckets_views_logs;
   public $projects_locations_operations;
-  public $projects_locations_recentQueries;
-  public $projects_locations_savedQueries;
   public $projects_logs;
   public $projects_metrics;
   public $projects_sinks;
@@ -594,86 +586,6 @@ class Logging extends \Google\Service
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->billingAccounts_locations_recentQueries = new Logging\Resource\BillingAccountsLocationsRecentQueries(
-        $this,
-        $this->serviceName,
-        'recentQueries',
-        [
-          'methods' => [
-            'list' => [
-              'path' => 'v2/{+parent}/recentQueries',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->billingAccounts_locations_savedQueries = new Logging\Resource\BillingAccountsLocationsSavedQueries(
-        $this,
-        $this->serviceName,
-        'savedQueries',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v2/{+parent}/savedQueries',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'savedQueryId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v2/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v2/{+parent}/savedQueries',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
                 'pageSize' => [
                   'location' => 'query',
@@ -1420,86 +1332,6 @@ class Logging extends \Google\Service
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->folders_locations_recentQueries = new Logging\Resource\FoldersLocationsRecentQueries(
-        $this,
-        $this->serviceName,
-        'recentQueries',
-        [
-          'methods' => [
-            'list' => [
-              'path' => 'v2/{+parent}/recentQueries',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->folders_locations_savedQueries = new Logging\Resource\FoldersLocationsSavedQueries(
-        $this,
-        $this->serviceName,
-        'savedQueries',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v2/{+parent}/savedQueries',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'savedQueryId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v2/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v2/{+parent}/savedQueries',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
                 'pageSize' => [
                   'location' => 'query',
@@ -2588,86 +2420,6 @@ class Logging extends \Google\Service
           ]
         ]
     );
-    $this->organizations_locations_recentQueries = new Logging\Resource\OrganizationsLocationsRecentQueries(
-        $this,
-        $this->serviceName,
-        'recentQueries',
-        [
-          'methods' => [
-            'list' => [
-              'path' => 'v2/{+parent}/recentQueries',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->organizations_locations_savedQueries = new Logging\Resource\OrganizationsLocationsSavedQueries(
-        $this,
-        $this->serviceName,
-        'savedQueries',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v2/{+parent}/savedQueries',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'savedQueryId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v2/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v2/{+parent}/savedQueries',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->organizations_logs = new Logging\Resource\OrganizationsLogs(
         $this,
         $this->serviceName,
@@ -3288,86 +3040,6 @@ class Logging extends \Google\Service
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_recentQueries = new Logging\Resource\ProjectsLocationsRecentQueries(
-        $this,
-        $this->serviceName,
-        'recentQueries',
-        [
-          'methods' => [
-            'list' => [
-              'path' => 'v2/{+parent}/recentQueries',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_savedQueries = new Logging\Resource\ProjectsLocationsSavedQueries(
-        $this,
-        $this->serviceName,
-        'savedQueries',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v2/{+parent}/savedQueries',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'savedQueryId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v2/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v2/{+parent}/savedQueries',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
                 'pageSize' => [
                   'location' => 'query',

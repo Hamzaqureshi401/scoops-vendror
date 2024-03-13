@@ -392,16 +392,6 @@ class AnalyticsHub extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'getIamPolicy' => [
-              'path' => 'v1/{+resource}:getIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'list' => [
               'path' => 'v1/{+parent}/subscriptions',
               'httpMethod' => 'GET',
@@ -439,16 +429,6 @@ class AnalyticsHub extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

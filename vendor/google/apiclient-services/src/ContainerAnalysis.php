@@ -23,10 +23,7 @@ use Google\Client;
  * Service definition for ContainerAnalysis (v1).
  *
  * <p>
- * This API is a prerequisite for leveraging Artifact Analysis scanning
- * capabilities in both Artifact Registry and with Advanced Vulnerability
- * Insights (runtime scanning) in GKE. In addition, the Container Analysis API
- * is an implementation of the Grafeas API, which enables storing, querying, and
+ * An implementation of the Grafeas API, which stores, and enables querying and
  * retrieval of critical metadata about all of your software artifacts.</p>
  *
  * <p>
@@ -45,7 +42,6 @@ class ContainerAnalysis extends \Google\Service
   public $projects_notes;
   public $projects_notes_occurrences;
   public $projects_occurrences;
-  public $projects_resources;
 
   /**
    * Constructs the internal representation of the ContainerAnalysis service.
@@ -346,26 +342,6 @@ class ContainerAnalysis extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_resources = new ContainerAnalysis\Resource\ProjectsResources(
-        $this,
-        $this->serviceName,
-        'resources',
-        [
-          'methods' => [
-            'exportSBOM' => [
-              'path' => 'v1/{+name}:exportSBOM',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

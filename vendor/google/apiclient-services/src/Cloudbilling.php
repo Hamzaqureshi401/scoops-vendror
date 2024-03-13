@@ -47,8 +47,6 @@ class Cloudbilling extends \Google\Service
 
   public $billingAccounts;
   public $billingAccounts_projects;
-  public $billingAccounts_subAccounts;
-  public $organizations_billingAccounts;
   public $projects;
   public $services;
   public $services_skus;
@@ -78,12 +76,7 @@ class Cloudbilling extends \Google\Service
             'create' => [
               'path' => 'v1/billingAccounts',
               'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
+              'parameters' => [],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -123,20 +116,6 @@ class Cloudbilling extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-                'parent' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'move' => [
-              'path' => 'v1/{+name}:move',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],'patch' => [
@@ -199,105 +178,6 @@ class Cloudbilling extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->billingAccounts_subAccounts = new Cloudbilling\Resource\BillingAccountsSubAccounts(
-        $this,
-        $this->serviceName,
-        'subAccounts',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v1/{+parent}/subAccounts',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}/subAccounts',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->organizations_billingAccounts = new Cloudbilling\Resource\OrganizationsBillingAccounts(
-        $this,
-        $this->serviceName,
-        'billingAccounts',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v1/{+parent}/billingAccounts',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}/billingAccounts',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'move' => [
-              'path' => 'v1/{+destinationParent}/{+name}:move',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'destinationParent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],

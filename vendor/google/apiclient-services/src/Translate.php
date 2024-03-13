@@ -43,10 +43,6 @@ class Translate extends \Google\Service
 
   public $projects;
   public $projects_locations;
-  public $projects_locations_adaptiveMtDatasets;
-  public $projects_locations_adaptiveMtDatasets_adaptiveMtFiles;
-  public $projects_locations_adaptiveMtDatasets_adaptiveMtFiles_adaptiveMtSentences;
-  public $projects_locations_adaptiveMtDatasets_adaptiveMtSentences;
   public $projects_locations_datasets;
   public $projects_locations_datasets_examples;
   public $projects_locations_glossaries;
@@ -134,17 +130,7 @@ class Translate extends \Google\Service
         'locations',
         [
           'methods' => [
-            'adaptiveMtTranslate' => [
-              'path' => 'v3/{+parent}:adaptiveMtTranslate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'batchTranslateDocument' => [
+            'batchTranslateDocument' => [
               'path' => 'v3/{+parent}:batchTranslateDocument',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -252,182 +238,6 @@ class Translate extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_adaptiveMtDatasets = new Translate\Resource\ProjectsLocationsAdaptiveMtDatasets(
-        $this,
-        $this->serviceName,
-        'adaptiveMtDatasets',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v3/{+parent}/adaptiveMtDatasets',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v3/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v3/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'importAdaptiveMtFile' => [
-              'path' => 'v3/{+parent}:importAdaptiveMtFile',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v3/{+parent}/adaptiveMtDatasets',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_adaptiveMtDatasets_adaptiveMtFiles = new Translate\Resource\ProjectsLocationsAdaptiveMtDatasetsAdaptiveMtFiles(
-        $this,
-        $this->serviceName,
-        'adaptiveMtFiles',
-        [
-          'methods' => [
-            'delete' => [
-              'path' => 'v3/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v3/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v3/{+parent}/adaptiveMtFiles',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_adaptiveMtDatasets_adaptiveMtFiles_adaptiveMtSentences = new Translate\Resource\ProjectsLocationsAdaptiveMtDatasetsAdaptiveMtFilesAdaptiveMtSentences(
-        $this,
-        $this->serviceName,
-        'adaptiveMtSentences',
-        [
-          'methods' => [
-            'list' => [
-              'path' => 'v3/{+parent}/adaptiveMtSentences',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_adaptiveMtDatasets_adaptiveMtSentences = new Translate\Resource\ProjectsLocationsAdaptiveMtDatasetsAdaptiveMtSentences(
-        $this,
-        $this->serviceName,
-        'adaptiveMtSentences',
-        [
-          'methods' => [
-            'list' => [
-              'path' => 'v3/{+parent}/adaptiveMtSentences',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],

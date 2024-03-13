@@ -34,9 +34,7 @@ use Google\Client;
  */
 class PaymentsResellerSubscription extends \Google\Service
 {
-  /** Associate you with your personal info on Google. */
-  const OPENID =
-      "openid";
+
 
   public $partners_products;
   public $partners_promotions;
